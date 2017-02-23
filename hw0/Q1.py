@@ -13,7 +13,8 @@ def fillMatrix(filePath):
 matA = fillMatrix(sys.argv[1])
 matB = fillMatrix(sys.argv[2])
 
-res = np.dot(matA, matB).tolist()[0]
+res = np.dot(matA, matB).flatten().tolist()
+
 res.sort()
 
 with open('ans_one.txt', 'w') as f:
